@@ -1,0 +1,18 @@
+default: &default
+  adapter: postgresql
+  hostname: 192.168.99.100
+  port: 5445
+  username: forest
+  password: secret
+  pool: 5
+  timeout: 5000
+
+development:
+  adapter: postgresql
+  database: forest-movies
+  encoding: unicode
+  pool: 5
+  host: 192.168.99.100
+  port: 5445
+  username: forest
+  password: secret
