@@ -6,16 +6,6 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-CSV.foreach('db/csv/omdbFull.csv', encoding: 'bom|utf-8', headers: true, col_sep: '\t') do |row|
-  begin
-  rescue
-    byebug
-  end
-end
-
-#require_relative '../app/services/movies-importer.rb'
-#import = MoviesImporterCSV.new(path: 'db/csv/omdbFull.csv')
-
 #import.valid_header?  # => false
 #import.report.message # => "The following columns are required: email"
 
