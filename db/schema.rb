@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428111225) do
+ActiveRecord::Schema.define(version: 20160428122735) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -68,7 +68,6 @@ ActiveRecord::Schema.define(version: 20160428111225) do
     t.string "street_address"
     t.string "zip_code"
     t.string "state"
-    t.string "geoloc"
   end
 
   create_table "genres", force: true do |t|
@@ -93,7 +92,6 @@ ActiveRecord::Schema.define(version: 20160428111225) do
     t.text     "writer",              default: [], array: true
     t.float    "imdb_rating"
     t.float    "imdb_votes"
-    t.text     "poster_url"
     t.text     "short_plot"
     t.text     "full_plot"
     t.text     "language"
