@@ -7,10 +7,9 @@ class AddAttachmentAvatarToMovies < ActiveRecord::Migration
     Movie.all.each do |movie|
       if movie.poster_url && movie.poster.blank?
         begin
-          URI.parse(movie.poster_url).open do |f|
-            movie.poster = f
-            movie.save
-          end
+          f = URI.parse(movie.poster_url)
+          movie.poster = f
+          movie.save
         rescue
           puts 'err mais osef'
         end
