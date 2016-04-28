@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160421101528) do
+ActiveRecord::Schema.define(version: 20160428111225) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -89,8 +89,8 @@ ActiveRecord::Schema.define(version: 20160421101528) do
     t.text     "year"
     t.text     "runtime"
     t.date     "released"
-    t.text     "director",    default: [], array: true
-    t.text     "writer",      default: [], array: true
+    t.text     "director",            default: [], array: true
+    t.text     "writer",              default: [], array: true
     t.float    "imdb_rating"
     t.float    "imdb_votes"
     t.text     "poster_url"
@@ -102,6 +102,10 @@ ActiveRecord::Schema.define(version: 20160421101528) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.decimal  "price"
+    t.string   "poster_file_name"
+    t.string   "poster_content_type"
+    t.integer  "poster_file_size"
+    t.datetime "poster_updated_at"
   end
 
   create_table "rentals", force: true do |t|
