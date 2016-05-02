@@ -7,5 +7,3 @@ postgres :
     - POSTGRES_DB=forest_movies
     - POSTGRES_USER=forest
     - POSTGRES_PASSWORD=secret
-  volumes:
-    - /Users/seyz/workspace/internal/forest-movies/db/csv:/tmp/foo
