@@ -21,7 +21,10 @@ module ForestMovies
     # config.i18n.default_locale = :de
     config.middleware.insert_before 0, 'Rack::Cors' do
       allow do
-        origins ['app.forestadmin.com', 'localhost:4200']
+        hostnames = ['localhost:4200', 'app.forestadmin.com']
+        hostnames += ENV['CORS_ORIGINS'].split(',') if ENV['CORS_ORIGINS']
+
+        origins hostnames
         resource '*', headers: :any, methods: :any
       end
     end
