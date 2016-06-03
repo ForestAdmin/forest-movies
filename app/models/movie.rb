@@ -5,6 +5,8 @@ class Movie < ActiveRecord::Base
   has_many :rentals
   has_many :comments
 
-  has_attached_file :poster, styles: { medium: "300x300>", thumb: "100x100>" }
+  has_attached_file :poster,
+    styles: { medium: "300x300>", thumb: "100x100>" },
+    s3_protocol: "https"
   validates_attachment_content_type :poster, content_type: /\Aimage\/.*\Z/
 end
