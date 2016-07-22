@@ -1,4 +1,6 @@
 ForestLiana::ResourcesController.class_eval do
+  caches_action :index, cache_path: Proc.new { |c| c.request.url }
+
   def create
     render body: 'You can only read data on this public demo application.',
       status: 403
