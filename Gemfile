@@ -41,7 +41,7 @@ gem 'spring',        group: :development
 gem 'csv-importer', group: [:development]
 gem 'pg'
 gem 'byebug', group: :development
-gem 'forest_liana'
+gem 'forest_liana', path: '~/workspace/internal/forest-rails'
 gem 'wikipedia-client'
 gem 'rack-cors'
 gem 'faker'
@@ -50,4 +50,3 @@ gem 'intercom'
 gem 'paperclip'
 gem 'aws-sdk', '~> 1.6'
 gem 'newrelic_rpm'
-gem 'actionpack-action_caching'
