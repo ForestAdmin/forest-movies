@@ -1,4 +1,4 @@
-class Forest::ActionsController < ForestLiana::ActionsController
+class Forest::ActionsController < ForestLiana::ApplicationController
   def approve
     comment = Comment.find(params['data']['attributes']['ids'][0])
     msg = "Comment by #{comment.customer.firstname} (##{comment.id}) approved."
