@@ -9,7 +9,7 @@ default: &default
 
 development:
   adapter: postgresql
-  database: forest-movies
+  database: forest_movies
   encoding: unicode
   pool: 5
   host: localhost
