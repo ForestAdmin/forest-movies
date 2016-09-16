@@ -1,6 +1,8 @@
 class StatsController < ForestLiana::ApplicationController
-  caches_action :movies_per_country, :avg_rentals_per_user,
-                :customer_paid_vs_free
+  unless Rails.env.development?
+    caches_action :movies_per_country, :avg_rentals_per_user,
+                  :customer_paid_vs_free
+  end
 
   def movies_per_country
     value = Movie
