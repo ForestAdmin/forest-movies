@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20160428122735) do
+ActiveRecord::Schema.define(version: 20160930081834) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -59,15 +59,17 @@ ActiveRecord::Schema.define(version: 20160428122735) do
   add_index "countries_movies", ["movie_id"], name: "index_countries_movies_on_movie_id", using: :btree
 
   create_table "customers", force: true do |t|
-    t.string "firstname"
-    t.string "lastname"
-    t.string "email"
-    t.string "stripe_id"
-    t.string "country"
-    t.string "city"
-    t.string "street_address"
-    t.string "zip_code"
-    t.string "state"
+    t.string   "firstname"
+    t.string   "lastname"
+    t.string   "email"
+    t.string   "stripe_id"
+    t.string   "country"
+    t.string   "city"
+    t.string   "street_address"
+    t.string   "zip_code"
+    t.string   "state"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "genres", force: true do |t|
@@ -106,6 +108,14 @@ ActiveRecord::Schema.define(version: 20160428122735) do
     t.datetime "poster_updated_at"
   end
 
+  create_table "noteables", force: true do |t|
+    t.string   "content"
+    t.integer  "ta_duty_id"
+    t.string   "ta_duty_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "rentals", force: true do |t|
     t.integer  "customer_id"
     t.integer  "movie_id"
@@ -115,5 +125,13 @@ ActiveRecord::Schema.define(version: 20160428122735) do
 
   add_index "rentals", ["customer_id"], name: "index_rentals_on_customer_id", using: :btree
   add_index "rentals", ["movie_id"], name: "index_rentals_on_movie_id", using: :btree
+
+  create_table "teaching_assistants", force: true do |t|
+    t.string   "name"
+    t.integer  "ta_duty_id"
+    t.string   "ta_duty_type"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
 end
