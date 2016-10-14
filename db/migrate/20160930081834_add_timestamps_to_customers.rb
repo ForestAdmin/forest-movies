@@ -6,7 +6,7 @@ class AddTimestampsToCustomers < ActiveRecord::Migration
       customer.created_at = DateTime.now - (rand * 100)
       customer.updated_at = DateTime.now - (rand * 100)
 
-      customer.save
+      customer.save!
     end
   end
 end

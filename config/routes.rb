@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  devise_for :customers
   namespace :forest do
     post '/actions/approve' => 'actions#approve'
     post '/actions/disapprove' => 'actions#disapprove'
