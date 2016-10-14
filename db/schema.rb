@@ -11,10 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161014094914) do
+ActiveRecord::Schema.define(version: 20161014123249) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+  enable_extension "pg_stat_statements"
 
   create_table "actor_images", force: true do |t|
     t.string  "url"
@@ -79,6 +80,7 @@ ActiveRecord::Schema.define(version: 20161014094914) do
     t.datetime "last_sign_in_at"
     t.inet     "current_sign_in_ip"
     t.inet     "last_sign_in_ip"
+    t.string   "gender"
   end
 
   add_index "customers", ["email"], name: "index_customers_on_email", unique: true, using: :btree
