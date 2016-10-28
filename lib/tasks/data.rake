@@ -14,7 +14,8 @@ namespace :movies do
                       city: Faker::Address.city,
                       street_address: Faker::Address.street_address,
                       zip_code: Faker::Address.zip_code,
-                      state: Faker::Address.state)
+                      state: Faker::Address.state,
+                      gender: [:Male, :Female].sample)
 
       (1..5).each do
         date = (Date.today + day + rand(01..23).hour + rand(0..60).minutes).to_datetime
