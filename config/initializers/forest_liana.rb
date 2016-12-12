@@ -1,5 +1,5 @@
-ForestLiana.secret_key = ENV['FOREST_KEY']
-ForestLiana.auth_key = 'KCzlh119AQ8OuTHoRxg0UQ'
+ForestLiana.env_secret = Rails.application.secrets.forest_env_secret
+ForestLiana.auth_secret = Rails.application.secrets.forest_auth_secret
 
 ForestLiana.integrations = {
   stripe: {
