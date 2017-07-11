@@ -30,7 +30,7 @@ GEM
       thread_safe (~> 0.1)
       tzinfo (~> 1.1)
     arel (5.0.1.20140414130214)
-    arel-helpers (2.3.0)
+    arel-helpers (2.4.0)
       activerecord (>= 3.1.0, < 6)
     aws-sdk (1.66.0)
       aws-sdk-v1 (= 1.66.0)
@@ -74,7 +74,7 @@ GEM
     execjs (2.7.0)
     faker (1.6.6)
       i18n (~> 0.5)
-    forest_liana (1.5.12)
+    forest_liana (1.6.15)
       arel-helpers
       bcrypt
       groupdate
@@ -226,4 +226,4 @@ DEPENDENCIES
   wikipedia-client
 
 BUNDLED WITH
-   1.12.5
+   1.14.6
