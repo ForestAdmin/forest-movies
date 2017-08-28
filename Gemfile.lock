@@ -73,7 +73,7 @@ GEM
       i18n (~> 0.5)
     faraday (0.13.1)
       multipart-post (>= 1.2, < 3)
-    forest_liana (1.7.5)
+    forest_liana (1.7.6)
       arel-helpers
       bcrypt
       groupdate
