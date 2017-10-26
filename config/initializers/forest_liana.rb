@@ -7,8 +7,7 @@ ForestLiana.integrations = {
     mapping: 'Customer.stripe_id'
   },
   intercom: {
-    app_id: ENV['INTERCOM_APP_ID'],
-    api_key: ENV['INTERCOM_API_KEY'],
+    access_token: ENV['INTERCOM_ACCES_TOKEN'],
     mapping: 'Customer'
   }
 }
