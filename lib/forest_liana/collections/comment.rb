@@ -1,7 +1,7 @@
 class Forest::Comment
   include  ForestLiana::Collection
 
-  collection :comments
+  collection :Comment
 
   action 'Approve'
   action 'Disapprove'

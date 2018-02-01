@@ -1,7 +1,7 @@
 class Forest::Customer
   include  ForestLiana::Collection
 
-  collection :customers
+  collection :Customer
 
   search_fullname = lambda do |query, search|
     first_name, last_name = search.split

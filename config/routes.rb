@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   namespace :forest do
     post '/actions/approve' => 'actions#approve'
     post '/actions/disapprove' => 'actions#disapprove'
-    get '/actors/:actor_id/top_movies' => 'actors#top_movies'
+    get '/Actor/:actor_id/top_movies' => 'actors#top_movies'
   end
 
   mount ForestLiana::Engine => '/forest'
